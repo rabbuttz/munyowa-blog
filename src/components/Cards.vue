@@ -50,8 +50,8 @@ export default {
       this.dialog = false;
       var shareURL =
         "https://twitter.com/intent/tweet?text=" +
-        "@2a4g5j7p お兄ちゃん許して…😢" +
-        "#あむのゴミ箱（開発中）" +
+        "@2a4g5j7p お兄ちゃん許して…😢\n" +
+        "#あむのゴミ箱（開発中） " +
         "&url=" +
         "https://relaxed-bassi-cfd91c.netlify.app/";
       //シェア用の画面へ移行
