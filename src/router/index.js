@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import KijiIchiran from '../views/KijiIchiran.vue'
-import Test from '../views/Test.vue'
+import Article from '../views/Article'
+import About from '../views/About'
 
 Vue.use(VueRouter)
 
@@ -12,14 +12,14 @@ const routes = [
     name: 'Home',
     component: Home
   },
+
   {
-    path: '/kijiIchiran',
-    name: 'KijiIchiran',
-    component: KijiIchiran
+    path: '/article',
+    component: Article
   },
   {
-    path: '/Test',
-    component: Test
+    path: '/About',
+    component: About
   },
   { path: '/', redirect: '/Home' }
 ]

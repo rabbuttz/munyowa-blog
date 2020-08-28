@@ -5,7 +5,7 @@
         <v-list shaped>
           <v-subheader>ゴミ漁り</v-subheader>
           <v-list-item-group v-model="item" color="primary">
-            <v-list-item v-for="(item, i) in items" :key="i">
+            <v-list-item v-bind:to="item.route" v-for="(item, i) in items" :key="i">
               <v-list-item-icon>
                 <v-icon v-text="item.icon"></v-icon>
               </v-list-item-icon>
@@ -17,10 +17,13 @@
         </v-list>
       </v-card>
     </v-navigation-drawer>
+
+    <!-- ここからバー -->
+
     <v-app-bar app v-bind:hide-on-scroll="{hideOn}" color="orange">
       <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
       <div class="d-flex align-center">
-        <v-avatar>
+        <v-avatar @click="changeRoute(home)" style="cursor:pointer;">
           <v-img
             alt="munyowa-logo"
             class="shrink mr-2"
@@ -31,34 +34,47 @@
           />
         </v-avatar>
         <v-icon>fas fa-tachometer-alt</v-icon>
-        <v-toolbar-title>あむのゴミ箱</v-toolbar-title>
+        <v-toolbar-title @click="changeRoute(home)" style="cursor:pointer;">そたろのゴミ箱</v-toolbar-title>
       </div>
       <v-spacer></v-spacer>
-      <v-btn href="https://twitter.com/2a4g5j7p" target="_blank" text>
+      <v-btn href="https://わああ" target="_blank" text>
         <span class="mr-2">Twitter</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-footer color="orange lighten-3" app>©︎あむさん</v-footer>
+    <v-footer color="orange lighten-3" app>©︎そたろ</v-footer>
   </div>
 </template>
 
 <script>
+import router from "../router";
+
 export default {
   data() {
     return {
       drawer: null,
       item: 1,
       hideOn: true,
+      home: "Home",
       items: [
-        { text: "りんごのゴミ", icon: "mdi-assistant" },
-        { text: "パイナップルのヘタ", icon: "mdi-account" },
-        { text: "ゴキブリの死骸", icon: "mdi-flag" },
+        { text: "ゴミホームへ", icon: "mdi-home", route: "Home" },
+
+        { text: "ゴミサイトについて", icon: "mdi-flag", route: "About" },
       ],
     };
+  },
+  methods: {
+    changeRoute(route) {
+      router.push(route);
+    },
+  },
+  watch: {
+    $route() {
+      this.$forceUpdate();
+    },
   },
 };
 </script>
 
-<style scoped>
+<style>
 </style>

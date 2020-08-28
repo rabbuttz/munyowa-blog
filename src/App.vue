@@ -1,15 +1,12 @@
 <template>
-  <div id="App">
-    <v-app>
+  <v-app>
+    <div id="App">
       <Bar />
       <v-main>
-        <router-link to="/KijiIchiran">kijiへ</router-link>
-        <router-link to="/Test">Testへ</router-link>
-        <router-link to="/Home">Homeへ</router-link>
         <router-view></router-view>
       </v-main>
-    </v-app>
-  </div>
+    </div>
+  </v-app>
 </template>
 <script>
 import Bar from "./components/BarAndFooter";

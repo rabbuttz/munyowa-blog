@@ -1,9 +1,9 @@
 
 <template>
-  <v-app>
+  <div id="home">
     <HelloWorld />
     <Cards />
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ import HelloWorld from "../components/HelloWorld.vue";
 import Cards from "../components/Cards.vue";
 
 export default {
-  name: "App",
+  name: "Home",
   components: {
     HelloWorld,
     Cards,
