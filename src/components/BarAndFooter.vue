@@ -34,15 +34,15 @@
           />
         </v-avatar>
         <v-icon>fas fa-tachometer-alt</v-icon>
-        <v-toolbar-title @click="changeRoute(home)" style="cursor:pointer;">そたろのゴミ箱</v-toolbar-title>
+        <v-toolbar-title @click="changeRoute(home)" style="cursor:pointer;">あむのゴミ箱</v-toolbar-title>
       </div>
       <v-spacer></v-spacer>
-      <v-btn href="https://わああ" target="_blank" text>
+      <v-btn href="https://twitter.com/2a4g5j7p" target="_blank" text>
         <span class="mr-2">Twitter</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-footer color="orange lighten-3" app>©︎そたろ</v-footer>
+    <v-footer color="orange lighten-3" app>©︎あむさん</v-footer>
   </div>
 </template>
 
